@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<title>Sir丶z</title>
+		<!--  FullPage 核心 CSS 文件 -->
+		<link rel="stylesheet" type="text/css" href="css/jquery.fullPage.min.css">
+		<!--  Bootstrap 核心 CSS 文件 -->
+		<link rel="stylesheet" href="bootstrap-3.3.0-dist/dist/css/bootstrap.min.css">
+		<!--  font-awesome 核心 CSS 文件-->
+		<link rel="stylesheet" href="font-awesome-4.6.3/css/font-awesome.min.css">
+		<!--  jQuery 核心 JS 文件 -->
+		<script src="js/jquery.min.js"></script>
+		<!--  FullPage 核心 JavaScript 文件 -->
+		<script src="js/jquery.fullPage.js"></script>
+		<!--  Bootstrap 核心 JavaScript 文件 -->
+		<script src="bootstrap-3.3.0-dist/dist/js/bootstrap.min.js"></script>
+		
+
+    	
+	</head>
+	<body>
+	<div id="clock">
+		<!-- <i id="conClock" class="fa fa-close fa-2x" style="color:lightblue" onclick="controlClock();"></i> -->
+		<canvas id="myclock" height="200px" width="200px">
+			 当前浏览器不支持Canvas，请更换浏览器后再试
+		</canvas>
+	</div>
+	<ul id="menu">
+		<li data-menuanchor="page1" class="active"><a href="#page1">Welcome</a></li>
+		<li data-menuanchor="page2"><a href="#page2">放松一下</a></li>
+		<li data-menuanchor="page3"><a href="#page3">学习路线</a></li>
+		<li data-menuanchor="page4"><a href="#page4">关于本站</a></li>
+	</ul>
+	<div id="fullpage">
+		<div class="section section1">
+			<!--search start-->
+			<div id="search" >
+	        	<div id="baiduSearch" class="input-group  input-group-lg" >
+		        	<span class="input-group-addon">
+			        	<i class="fa fa-paw"></i>
+			        </span>
+		        	<input id="input_baidu" type="text" class="form-control" onkeydown="onKeyDown(event,1)" placeholder="百度搜索" oninput="hidecontip();" />
+			         <span onclick="search(1);" class="input-group-addon btn">
+			        	<i class="fa fa-search"></i>
+			        </span>
+		        </div>
+		        <div id="googleSearch" class="input-group  input-group-lg" style="margin-top: 10px">
+		         	<span class="input-group-addon">
+			        	<i class="fa fa-google"></i>
+			        </span>
+		        	<input id="input_google" type="text" class="form-control" onkeydown="onKeyDown(event,2)" placeholder="Google Search" oninput="hidecontip();" x-webkit-speech=""/>
+			        <span onclick="search(2);" class="input-group-addon btn">
+			        	<i class="fa fa-search"></i>
+			        </span>
+		        </div>
+				<div id="contip" style="display: none;margin-top:10px">
+					<div class="alert alert-warning alert-dismissible" role="alert">
+					  	<strong>Warning!</strong> 请输入要搜索的关键词!<br /><br />
+				  	 	<strong>Well!</strong> 你也可以<i class="fa fa-hand-o-right"></i><a href="http://www.baidu.com/" class="alert-link" style="font-size: 18px">百度</a>或<i class="fa fa-hand-o-right"></i><a href="http://www.google.com/" class="alert-link" style="font-size: 20px">Google</a>
+					</div>
+	        	</div>
+	        	<div style="margin-top: 10px">
+		        	<button id="searchtip" type="button" class="btn btn-default" data-toggle="tooltip" data-placement="bottom" title="尝试一下【Enter】和【Esc】" onmouseover="showtip();">Search Tips</button>
+		        </div>
+	    	</div>
+	    	<!--search end-->
+	    	<img src="src/z.png" alt="Sir丶z" class="img-circle"><!--img-thumbnail img-rounded img-circle-->
+			<h1><a href="http://www.zhangdanyang.com" class="wb"><i class="fa fa-home fa-lg"></i>主页</a></h1>
+			<h1><a href="http://www.jianshu.com/users/97887a368d79" class="wb"><i class="fa fa-code fa-lg"></i>简书</a></h1>
+		</div>
+		<div class="section section2">
+			<div style="width: 80% ;margin: auto;">
+				<div class="page-header wb">
+					<h1><i class="fa fa-circle-o-notch fa-spin"></i> Just For Fun <i class="fa fa-circle-o-notch fa-spin"></i><small> 嗯…目前在学习C++，Windows编程，前端</small>	</h1>
+					
+					<div style="width: 60%;margin: auto;" onclick="proAct();">
+					<!-- <button type="button" class="btn btn-info inline" >点我看看</button> -->
+						<div class="progress" style="margin-top: 10px;">
+							<div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+							目前能量值：60%【点我看看】
+							</div>
+						</div>
+					</div>
+				</div>
+				<p>
+				<button type="button" class="btn btn-default inline" onclick="window.location.href='works/SubwayFee/index.html'">地铁计费</button>
+				<button type="button" class="btn btn-default inline" onclick="window.location.href='works/snake.html'">贪吃蛇</button>
+				<button type="button" class="btn btn-default inline" onclick="window.location.href='works/Tangram/tangram.html'">七巧板</button>
+
+				</p>
+			</div>
+		</div>
+		<div class="section section3">
+			<div class="panel panel-default" style="width: 80%;margin:auto;">
+				<div class="panel-heading bb">推荐学习路线</div>
+			  	<div class="panel-body" style="text-align: left;">
+			    <p>【C】<a href="http://pan.baidu.com/s/1qY9zmGk"><span class="bb">《C程序设计谭浩强》</span></a>书写格式有些许问题，也有一定的错误，但是不失为学习C语言入门的宝典。</p>
+			    <p>【C++】<span class="label label-default">正在学习</span><a href="http://pan.baidu.com/s/1qYpM2Bi"><span class="bb">《C++ Primer》</span></a>很棒的一本书，内容涵盖面广，适合细细钻研。</p>
+			     <p>【Windows】<span class="label label-default">正在学习</span><a href="https://pan.baidu.com/s/1sl5utDN"><span class="bb">《Windows核心编程》《Windows系统编程》</span></a>很深奥很难理解，结合着网上的实例慢慢体会吧。</p>
+			    <p>【MFC】<a href="http://www.jizhuomi.com/software/257.html" class="blackfont"><span class="bb">鸡啄米-VS2010/MFC编程入门教程之目录和总结</span></a>看完后大概可以写点东西了，但是想要进行深度改造，那就去看<a href="https://pan.baidu.com/s/1gf0mWRT" class="blackfont"><span class="bb">孙鑫的C++教程视频</span></a>吧。</p>
+			    <p>【Duilib】<a href="http://pan.baidu.com/s/1nvEpflf"><span class="bb">Alberl-Duilib教程</span></a>Duilib本身有一定的问题，但是其应用十分广泛，看了一些教程后，感觉这个教程算是最好的，还有里面提到的一些bug已经修复了。</p>
+			    <p>【OpenGL】<a href="http://www.learnopengl.com/"><span class="bb">learnopengl教程</span></a>不错的站点。<a href="https://learnopengl-cn.github.io/"><span class="bb">中文版本1</span></a><a href="http://bullteacher.com/category/zh_learnopengl_com"><span class="bb"> 中文版本2</span></a></p>
+			    <p>【More】<a href="http://www.runoob.com/coder-learn-path"><span class="bb">菜鸟教程-各类程序员学习路线图</span></a>大神的杰作！</p>
+			    <div class="panel-footer">温馨提示：以上为个人建议，仅供参考。如有建议，欢迎与我交流。
+			    </div>
+			</div>
+		</div>
+		</div>
+		<div class="section section4">
+			<div class="slide">
+				<div style="width:80%;margin: auto;">
+					<div class="page-header">
+						<h1>This Page <small>使用<kbd>↑</kbd><kbd>↓</kbd><kbd>←</kbd><kbd>→</kbd>玩转此页面吧</small></h1>
+					</div>
+					<ul class="list-group">
+						<li class="list-group-item">只是单纯的说说你现在看到的页面</li>
+						<li class="list-group-item">这是一个"纯静态"html页面，代码托管在coding.net</li>
+					  	<li class="list-group-item">整体布局采用fullpage</li>
+					  	<li class="list-group-item">大部分样式来自bootstrap</li>
+					  	<li class="list-group-item">部分图标样式来自fontawesome</li>
+					</ul>
+				</div>
+			</div>
+			<div class="slide">
+				<div style="width:80%;margin: auto;">
+					<div class="page-header">
+						<h1>Flollow Me <small>点击下面的条目试试</small></h1>
+					</div>
+					<div class="list-group">
+					  	<a href="http://www.zhangdanyang.com/" class="list-group-item">
+					    【主站点】（基于阿里云虚拟主机+WordPress搭建）
+					  	</a>
+					  	<a href="http://www.jianshu.com/users/97887a368d79" class="list-group-item ">【博客】简书（关闭原Github Pages+Hexo,转入简书）</a>
+					  	<a href="http://weibo.com/zhangdanyangzdy" class="list-group-item ">【微博】（基本上每天都登录，有问题可以在微博上联系我）</a>
+					  	<a href="https://www.facebook.com/zhangdanyang" class="list-group-item ">【FaceBook】（国外社交网络都不怎么玩…）</a>
+					  	<a href="https://www.facebook.com/zhangdanyang" class="list-group-item ">【Fork me on github】（目前东西很少很少，以后会更新哒…）</a>
+					  	<a href="http://www.zhangdanyang.com/contact" class="list-group-item ">【more…】（看吧…反正绝大部分都是空白）</a>
+					</div>
+				</div>
+			</div>
+			<div class="slide"><h1>既然选择了远方，便只顾风雨兼程！</h1></div>
+		</div>
+	</div>
+	</body>
+	<link rel="stylesheet" href="css/main.css">
+	<script src="js/search.js"></script>
+	<script src="js/main.js"></script>
+	<script src="js/mymouse.js" id="mymouse"></script>
+	<script src="js/myclock.js"></script>
+</html>

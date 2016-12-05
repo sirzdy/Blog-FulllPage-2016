@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>地铁计费</title>
+	<script type="text/javascript" src="calfee.js"></script>
+	<style>
+		body{font-family: "Microsoft YaHei UI";font-size:24px;}
+		#feeChart{border:5px solid #555;display: block;margin: 50px auto;}
+		.statement{text-align: left;width:1000px;margin:20px auto;font-size: 10px;}
+		.fillInput{text-align:center;margin: 50px auto;}
+		.fillInputBlank{font-size: 20px;}
+		.btnGo{ font-size: 20px;font-family: "Microsoft YaHei UI"; }
+	</style>
+</head>
+<body>
+
+	<div class="fillInput">
+		请输入打折前单次消费金额：<input type="text" placeholder="" id="perFee" class="fillInputBlank"/><br>
+		请输入平均每天乘车次数：　<input type="text" placeholder="" id="dayCounts" class="fillInputBlank"/><br>
+		<input type="button" onclick="drawChart()" value="绘制折线图（可绘制多条）" class="btnGo" />
+		<input type="button" onclick="clearChart()" value="清除图中折线" class="btnGo" />
+	</div>
+	<canvas id="feeChart">
+		当前浏览器不支持Canvas，请更换浏览器后再试
+	</canvas>
+	<div>
+		<p class="statement">北京地铁计费规则：<br>
+			每自然月内，使用市政交通一卡通乘坐地铁,
+			支出累计满100元以后的乘次，价格给予8折优惠;
+			满150元以后的乘次，价格给予5折优惠;
+			支出累计达400元以后的乘次，不再享受打折优惠。
+		</p>
+		<p class="statement">适用情景：<br>
+			适用于北京市上班族计算每月地铁上的消费。
+			例如：本人每天上下班单程不打折时5元，一般上班22天，这样大概消费180元。
+		</p>
+		<p class="statement">使用说明：<br>
+			图中的纵坐标是消费总金额，从每月第一天算起，横坐标是日期。一般双休的大概看到22号即可，单休的大概看到26号，无休的看到31号。输入打折前单次消费金额与每天乘车次数，点击绘制折线图按钮即可。注意：本页面出现的金额单位一律为元（人民币）。
+		</p>
+	</div>
+</body>
+</html>

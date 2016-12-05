@@ -1,0 +1,20 @@
+body{font-family: "微软雅黑";}
+#clock{position:fixed;top: 0;right: 0;height: 100%;}
+/* #conClock{position:fixed;top: 0;right: 0;} */
+#myclock{margin-right: 20px;margin-top: 20px}
+#search{position: fixed;top: 75px;left:10px;width: 400px;font-size:18px;} 
+#menu { margin: 0; padding: 0; position: fixed; left: 10px; top: 10px; list-style-type: none; z-index: 70;}
+#menu li { float: left; margin:  0 10px 0 0; font-size: 14px;}
+#menu a { float: left; padding: 10px 20px; background-color: #fff; color: #333; text-decoration: none;}
+#menu .active a { color: #fff; background-color: #333;}
+.section a ,.section{ text-align: center;}
+.section1 p { position: relative; left: -120%;}
+.section3 p { position: relative; bottom: -120%;}
+.section4 p { display: none;} 
+ .section1 { background: url(../img/1.jpg)no-repeat;background-size:100% 100%;}
+.section2 { background: url(../img/8.jpg) 50%;no-repeat;background-size:100% 100%;}
+.section3 { background: url(../img/2.jpg) 50%;no-repeat;background-size:100% 100%;}
+.section4 { background: url(../img/9.jpg) 50%;no-repeat;background-size:100% 100%;} 
+.panel {color: #000;}
+.bb {color: #000;font-weight: bold;}
+.wb {color:#fff;}
